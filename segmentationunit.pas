@@ -13,6 +13,7 @@ type
 
   TForm1 = class(TForm)
     btnUpload: TButton;
+    btnSave: TButton;
   private
 
   public

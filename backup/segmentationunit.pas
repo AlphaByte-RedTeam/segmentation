@@ -5,10 +5,15 @@ unit segmentationUnit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    btnUpload: TButton;
+    Button1: TButton;
   private
 
   public
