@@ -35,6 +35,8 @@ implementation
 
 { TForm1 }
 
+uses Windows;
+
 procedure TForm1.btnUploadClick(Sender: TObject);
 var
   i, j: integer;
