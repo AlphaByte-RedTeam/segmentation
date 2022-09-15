@@ -15,6 +15,7 @@ type
     btnUpload: TButton;
     btnSave: TButton;
     btnBinary: TButton;
+    btnSegmentation: TButton;
   private
 
   public
