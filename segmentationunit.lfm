@@ -23,6 +23,7 @@ object Form1: TForm1
     Top = 64
     Width = 94
     Caption = 'Save'
+    OnClick = btnSaveClick
     TabOrder = 1
   end
   object btnBinary: TButton

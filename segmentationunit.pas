@@ -19,6 +19,7 @@ type
     btnGray: TButton;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
+    procedure btnSaveClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
   private
 
@@ -56,6 +57,14 @@ begin
         bmpB[i, j] := getBValue(imgSrc.Canvas.Pixels[i, j]);
       end;
     end;
+  end;
+end;
+
+procedure TForm1.btnSaveClick(Sender: TObject);
+begin
+  if (saveDialog.Execute) then
+  begin
+    imgMod.Picture.SaveToFile(saveDialog.FileName);
   end;
 end;
 

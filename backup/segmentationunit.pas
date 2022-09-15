@@ -37,6 +37,9 @@ implementation
 
 uses Windows;
 
+var
+  bmpR, bmpG, bmpB, bmpBinary: array[0..1000, 0..1000] of integer;
+
 procedure TForm1.btnUploadClick(Sender: TObject);
 var
   i, j: integer;
