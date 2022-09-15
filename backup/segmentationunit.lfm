@@ -54,13 +54,13 @@ object Form1: TForm1
   end
   object imgSrc: TImage
     Left = 32
-    Height = 250
+    Height = 176
     Top = 216
     Width = 250
   end
   object imgMod: TImage
     Left = 440
-    Height = 250
+    Height = 176
     Top = 208
     Width = 250
   end
