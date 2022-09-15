@@ -77,6 +77,21 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
   end
+  object Label2: TLabel
+    Left = 512
+    Height = 28
+    Top = 488
+    Width = 145
+    Caption = 'Modified Image'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -20
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
   object openDialog: TOpenDialog
     Left = 24
     Top = 112
