@@ -14,6 +14,7 @@ type
   TForm1 = class(TForm)
     btnUpload: TButton;
     btnSave: TButton;
+    btnBinary: TButton;
   private
 
   public
