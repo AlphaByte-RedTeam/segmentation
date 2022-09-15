@@ -20,6 +20,7 @@ type
     imgMod: TImage;
     imgSrc: TImage;
     Label1: TLabel;
+    Label2: TLabel;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
     procedure btnSaveClick(Sender: TObject);
