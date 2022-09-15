@@ -16,6 +16,7 @@ type
     btnSave: TButton;
     btnBinary: TButton;
     btnSegmentation: TButton;
+    btnGray: TButton;
   private
 
   public
