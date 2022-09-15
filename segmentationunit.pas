@@ -18,6 +18,7 @@ type
     btnSegmentation: TButton;
     btnGray: TButton;
     openDialog: TOpenDialog;
+    saveDialog: TSaveDialog;
   private
 
   public

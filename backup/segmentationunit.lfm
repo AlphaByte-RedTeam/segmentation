@@ -48,4 +48,8 @@ object Form1: TForm1
     Caption = 'Gray'
     TabOrder = 4
   end
+  object openDialog: TOpenDialog
+    Left = 24
+    Top = 112
+  end
 end

@@ -17,6 +17,7 @@ type
     btnBinary: TButton;
     btnSegmentation: TButton;
     btnGray: TButton;
+    openDialog: TOpenDialog;
   private
 
   public
