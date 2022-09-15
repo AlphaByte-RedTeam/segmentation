@@ -23,6 +23,7 @@ type
     Label2: TLabel;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
+    procedure btnBinaryClick(Sender: TObject);
     procedure btnGrayClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
@@ -84,6 +85,31 @@ begin
     begin
       gray := (bmpR[x, y] + bmpG[x, y] + bmpB[x, y]) div 3;
       imgMod.Canvas.Pixels[x, y] := RGB(gray, gray, gray);
+    end;
+  end;
+end;
+
+procedure TForm1.btnBinaryClick(Sender: TObject);
+var
+  x, y: integer;
+  gray: byte;
+begin
+  for y:=0 to imgSrc.Height-1 do
+  begin
+    for x:=0 to imgSrc.Width-1 do
+    begin
+      gray := (bmpR[x, y] + bmpG[x, y] + bmpB[x, y]) div 3;
+      if (gray <= 127) then
+      begin
+        bmpBinary[x, y] := 0;
+        imgMod.Canvas.Pixels[x, y] := RGB(0, 0, 0);
+      end
+
+      else
+      begin
+        bmpBinary[x, y] := 1;
+        imgMod.Canvas.Pixels[x, y] := RGB(255, 255, 255);
+      end;
     end;
   end;
 end;

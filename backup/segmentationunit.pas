@@ -23,6 +23,7 @@ type
     Label2: TLabel;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
+    procedure btnGrayClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
   private
@@ -69,6 +70,21 @@ begin
   if (saveDialog.Execute) then
   begin
     imgMod.Picture.SaveToFile(saveDialog.FileName);
+  end;
+end;
+
+procedure TForm1.btnGrayClick(Sender: TObject);
+var
+  x, y: integer;
+  gray: byte;
+begin
+  for y:=0 to imgMod.Height-1 do
+  begin
+    for x:=0 to imgMod.Width-1 do
+    begin
+      gray := (bmpR[x, y] + bmpG[x, y] + bmpB[x, y]) div 3;
+      imgMod.Canvas.Pixels[x, y] := RGB(gray, gray, gray);
+    end;
   end;
 end;
 
