@@ -5,7 +5,7 @@ unit segmentationUnit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
@@ -17,6 +17,7 @@ type
     btnBinary: TButton;
     btnSegmentation: TButton;
     btnGray: TButton;
+    imgSrc: TImage;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
     procedure btnSaveClick(Sender: TObject);

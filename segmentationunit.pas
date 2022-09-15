@@ -17,6 +17,7 @@ type
     btnBinary: TButton;
     btnSegmentation: TButton;
     btnGray: TButton;
+    imgMod: TImage;
     imgSrc: TImage;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
