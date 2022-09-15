@@ -19,6 +19,7 @@ type
     btnGray: TButton;
     imgMod: TImage;
     imgSrc: TImage;
+    Label1: TLabel;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
     procedure btnSaveClick(Sender: TObject);
