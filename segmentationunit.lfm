@@ -118,6 +118,23 @@ object Form1: TForm1
     Position = 1
     TabOrder = 6
   end
+  object btnErosi: TButton
+    Left = 440
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Erosi'
+    OnClick = btnErosiClick
+    TabOrder = 7
+  end
+  object btnDilasi: TButton
+    Left = 544
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Dilasi'
+    TabOrder = 8
+  end
   object openDialog: TOpenDialog
     Left = 19
     Top = 90
