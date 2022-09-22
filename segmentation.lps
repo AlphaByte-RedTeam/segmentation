@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit>
       <Unit>
         <Filename Value="segmentationunit.pas"/>
@@ -22,48 +22,133 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="segmentationUnit"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="85"/>
-        <CursorPos X="17" Y="94"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="117"/>
+        <CursorPos X="35" Y="127"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="8">
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="42" Column="67" TopLine="15"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="67" Column="52" TopLine="38"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="68" Column="52" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="69" Column="52" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="70" Column="52" TopLine="41"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="72" Column="52" TopLine="43"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="87" Column="59" TopLine="59"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="segmentationunit.pas"/>
         <Caret Line="93" Column="17" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="94" Column="17" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="99" Column="3" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="50" Column="67" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="85" Column="3" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="192" Column="7" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="195" Column="4" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="141" Column="52" TopLine="117"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="166" Column="4" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="121" Column="14" TopLine="115"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="161" Column="13"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="143" Column="22" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="90" Column="31" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="137" Column="14" TopLine="121"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="153" Column="15" TopLine="136"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="46" Column="42" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="137" Column="15" TopLine="121"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="125" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="142" Column="47" TopLine="137"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="108" Column="9" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="137" Column="9" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="165" Column="8" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="166" Column="5" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="167" Column="5" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="174" Column="5" TopLine="142"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="80" Column="17" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="83" Column="34" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="90" Column="34" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="63" Column="31" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="76" Column="62" TopLine="30"/>
       </Position>
     </JumpHistory>
     <RunParams>

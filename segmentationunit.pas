@@ -5,7 +5,8 @@ unit segmentationUnit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  ComCtrls;
 
 type
 
@@ -24,10 +25,14 @@ type
     Label2: TLabel;
     openDialog: TOpenDialog;
     saveDialog: TSaveDialog;
+    tbBiner: TTrackBar;
     procedure btnBinaryClick(Sender: TObject);
+    procedure btnDeteksiTepiClick(Sender: TObject);
     procedure btnGrayClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
+    procedure imgSrcClick(Sender: TObject);
+    procedure tbBinerChange(Sender: TObject);
   private
 
   public
@@ -46,12 +51,16 @@ implementation
 uses Windows;
 
 var
-  bmpR, bmpG, bmpB, bmpBinary: array[0..1000, 0..1000] of integer;
+  bmpR, bmpG, bmpB, bmpRR, bmpGG, bmpBB, bmpBinary, BitmapGray, hasilGray : array[-1..1000, -1..1000] of integer;
+  SE : array [-1..1,-1..1] of Integer;
 
 procedure TForm1.btnUploadClick(Sender: TObject);
 var
   i, j: integer;
 begin
+  imgMod.Height := imgSrc.Height;
+  imgMod.Width := imgSrc.Width;
+
   if (openDialog.Execute) then
   begin
     imgSrc.Picture.LoadFromFile(openDialog.FileName);
@@ -62,9 +71,23 @@ begin
         bmpR[i, j] := getRValue(imgSrc.Canvas.Pixels[i, j]);
         bmpG[i, j] := getGValue(imgSrc.Canvas.Pixels[i, j]);
         bmpB[i, j] := getBValue(imgSrc.Canvas.Pixels[i, j]);
+
+        //bmpRR[i, j] := getRValue(imgMod.Canvas.Pixels[i, j]);
+        //bmpGG[i, j] := getGValue(imgMod.Canvas.Pixels[i, j]);
+        //bmpBB[i, j] := getBValue(imgMod.Canvas.Pixels[i, j]);
       end;
     end;
   end;
+end;
+
+procedure TForm1.imgSrcClick(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.tbBinerChange(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.btnSaveClick(Sender: TObject);
@@ -85,6 +108,7 @@ begin
     for x:=0 to imgMod.Width-1 do
     begin
       gray := (bmpR[x, y] + bmpG[x, y] + bmpB[x, y]) div 3;
+      BitmapGray[x,y] := gray;
       imgMod.Canvas.Pixels[x, y] := RGB(gray, gray, gray);
     end;
   end;
@@ -100,7 +124,7 @@ begin
     for x:=0 to imgSrc.Width-1 do
     begin
       gray := (bmpR[x, y] + bmpG[x, y] + bmpB[x, y]) div 3;
-      if (gray <= 127) then
+      if (gray <= tbBiner.Position) then
       begin
         bmpBinary[x, y] := 0;
         imgMod.Canvas.Pixels[x, y] := RGB(0, 0, 0);
@@ -115,5 +139,49 @@ begin
   end;
 end;
 
-end.
+procedure TForm1.btnDeteksiTepiClick(Sender: TObject);
+var
+  i, j, k, l  : integer;
+  temp : double;
 
+begin
+  //objek berwarna hitam
+
+  for j := -1 to 1 do
+  begin
+    for i := -1 to 1 do
+    begin
+      SE[i,j] := -1;
+    end;
+  end;
+
+  SE[0,0] := 8;
+
+  for j:=0 to imgSrc.Height-1 do
+  begin
+    BitmapGray[-1,j] := BitmapGray[0,j];
+    BitmapGray[imgSrc.Width,j] := BitmapGray[imgSrc.Width-1,j];
+  end;
+  for i:=-1 to imgSrc.Width do
+  begin
+    BitmapGray[i,-1] := BitmapGray[i,0];
+    BitmapGray[i,imgSrc.Height] := BitmapGray[i,imgSrc.Height-1];
+  end;
+  for j:=0 to imgSrc.Height-1 do
+  begin
+    for i:=0 to imgSrc.Width-1 do
+    begin
+      temp := 0;
+      for l:=-1 to 1 do
+      begin
+        for k:=-1 to 1 do
+        begin
+          Temp := Temp + BitmapGray[i-k,j-l] * SE[k,l];
+        end;
+      end;
+      hasilGray[i,j] := Round(temp);
+
+    end;
+  end;
+   end;
+end.

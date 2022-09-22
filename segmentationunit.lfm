@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 682
+  Left = 372
   Height = 555
-  Top = 184
+  Top = 97
   Width = 729
   Caption = 'Form1'
   ClientHeight = 555
@@ -61,12 +61,15 @@ object Form1: TForm1
     Height = 86
     Top = 173
     Width = 86
+    AutoSize = True
+    OnClick = imgSrcClick
   end
   object imgMod: TImage
     Left = 352
     Height = 86
     Top = 173
     Width = 86
+    AutoSize = True
   end
   object Label1: TLabel
     Left = 70
@@ -97,12 +100,23 @@ object Form1: TForm1
     ParentFont = False
   end
   object btnDeteksiTepi: TButton
-    Left = 264
-    Height = 25
-    Top = 13
-    Width = 99
+    Left = 248
+    Height = 33
+    Top = 43
+    Width = 163
     Caption = 'Deteksi Tepi'
+    OnClick = btnDeteksiTepiClick
     TabOrder = 5
+  end
+  object tbBiner: TTrackBar
+    Left = 448
+    Height = 33
+    Top = 91
+    Width = 256
+    Max = 255
+    OnChange = tbBinerChange
+    Position = 1
+    TabOrder = 6
   end
   object openDialog: TOpenDialog
     Left = 19
