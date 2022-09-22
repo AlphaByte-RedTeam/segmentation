@@ -17,6 +17,7 @@ type
     btnBinary: TButton;
     btnSegmentation: TButton;
     btnGray: TButton;
+    btnDeteksiTepi: TButton;
     imgMod: TImage;
     imgSrc: TImage;
     Label1: TLabel;

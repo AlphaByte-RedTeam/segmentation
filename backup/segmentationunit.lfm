@@ -54,15 +54,15 @@ object Form1: TForm1
   end
   object imgSrc: TImage
     Left = 32
-    Height = 176
+    Height = 108
     Top = 216
-    Width = 250
+    Width = 108
   end
   object imgMod: TImage
     Left = 440
-    Height = 176
+    Height = 108
     Top = 216
-    Width = 250
+    Width = 108
   end
   object Label1: TLabel
     Left = 88
