@@ -22,34 +22,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="segmentationUnit"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="40"/>
-        <CursorPos X="86" Y="57"/>
+        <TopLine Value="232"/>
+        <CursorPos Y="265"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="94" Column="17" TopLine="85"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="99" Column="3" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="85" Column="3" TopLine="80"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="192" Column="7" TopLine="155"/>
-      </Position>
-      <Position>
-        <Filename Value="segmentationunit.pas"/>
-        <Caret Line="195" Column="4" TopLine="162"/>
-      </Position>
       <Position>
         <Filename Value="segmentationunit.pas"/>
         <Caret Line="141" Column="52" TopLine="117"/>
@@ -149,6 +129,26 @@
       <Position>
         <Filename Value="segmentationunit.pas"/>
         <Caret Line="130" Column="35" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="57" Column="86" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="269" Column="5" TopLine="236"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="221" Column="44" TopLine="188"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="237" Column="16" TopLine="220"/>
+      </Position>
+      <Position>
+        <Filename Value="segmentationunit.pas"/>
+        <Caret Line="263" Column="7" TopLine="261"/>
       </Position>
     </JumpHistory>
     <RunParams>
