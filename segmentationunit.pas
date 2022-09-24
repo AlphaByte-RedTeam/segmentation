@@ -21,6 +21,7 @@ type
     btnDeteksiTepi: TButton;
     btnErosi: TButton;
     btnDilasi: TButton;
+    Edit_Trackbar: TEdit;
     imgMod: TImage;
     imgSrc: TImage;
     Label1: TLabel;
@@ -36,6 +37,7 @@ type
     procedure btnSaveClick(Sender: TObject);
     procedure btnSegmentationClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
+    procedure Edit_TrackbarChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure imgSrcClick(Sender: TObject);
     procedure tbBinerChange(Sender: TObject);
@@ -82,6 +84,11 @@ begin
     imgMod.Width  := imgSrc.Width;
 end;
 
+procedure TForm1.Edit_TrackbarChange(Sender: TObject);
+begin
+  tbBiner.Position := StrToInt(Edit_Trackbar.Text);
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   imgMod.Height := imgSrc.Height;
@@ -95,7 +102,7 @@ end;
 
 procedure TForm1.tbBinerChange(Sender: TObject);
 begin
-
+    Edit_Trackbar.Text := IntToStr(tbBiner.Position);
 end;
 
 procedure TForm1.btnSaveClick(Sender: TObject);
