@@ -34,7 +34,9 @@ type
     procedure btnErosiClick(Sender: TObject);
     procedure btnGrayClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
+    procedure btnSegmentationClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure imgSrcClick(Sender: TObject);
     procedure tbBinerChange(Sender: TObject);
   private
@@ -63,7 +65,7 @@ var
   i, j: integer;
 begin
   imgMod.Height := imgSrc.Height;
-  imgMod.Width := imgSrc.Width;
+  imgMod.Width  := imgSrc.Width;
 
   if (openDialog.Execute) then
   begin
@@ -75,13 +77,15 @@ begin
         bmpR[i, j] := getRValue(imgSrc.Canvas.Pixels[i, j]);
         bmpG[i, j] := getGValue(imgSrc.Canvas.Pixels[i, j]);
         bmpB[i, j] := getBValue(imgSrc.Canvas.Pixels[i, j]);
-
-        //bmpRR[i, j] := getRValue(imgMod.Canvas.Pixels[i, j]);
-        //bmpGG[i, j] := getGValue(imgMod.Canvas.Pixels[i, j]);
-        //bmpBB[i, j] := getBValue(imgMod.Canvas.Pixels[i, j]);
       end;
     end;
   end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  imgMod.Height := imgSrc.Height;
+  imgMod.Width  := imgSrc.Width;
 end;
 
 procedure TForm1.imgSrcClick(Sender: TObject);
@@ -100,6 +104,23 @@ begin
   begin
     imgMod.Picture.SaveToFile(saveDialog.FileName);
   end;
+end;
+
+procedure TForm1.btnSegmentationClick(Sender: TObject);
+var
+  i,j : integer;
+
+begin
+   for j:=0 to imgSrc.Height-1 do
+   begin
+    for i:=0 to imgSrc.Width-1 do
+    begin
+     if bmpBinary[i,j] = 0 then
+     begin
+       imgMod.Canvas.Pixels[i,j]:= RGB(bmpR[i,j], bmpG[i,j], bmpB[i,j]);
+     end;
+    end;
+   end;
 end;
 
 procedure TForm1.btnGrayClick(Sender: TObject);
@@ -324,7 +345,7 @@ begin
             hasilBiner[i,j] := objek
           else
             hasilBiner[i,j] := latar;
-          imgMod.Canvas.Pixels[i,j]:= RGB(hasilBiner[i,j]*255, hasilBiner[i,j]*255, hasilBiner[i,j]*255);
+            imgMod.Canvas.Pixels[i,j]:= RGB(hasilBiner[i,j]*255, hasilBiner[i,j]*255, hasilBiner[i,j]*255);
           end;
     end;
 
