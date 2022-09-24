@@ -128,7 +128,6 @@ var
   x, y: integer;
   gray: byte;
 begin
-  Form1.FormCreate();
   for y:=0 to imgMod.Height-1 do
   begin
     for x:=0 to imgMod.Width-1 do

@@ -71,6 +71,7 @@ object Form1: TForm1
     Height = 86
     Top = 173
     Width = 86
+    AutoSize = True
   end
   object Label1: TLabel
     Left = 70

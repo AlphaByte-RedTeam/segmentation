@@ -64,8 +64,6 @@ procedure TForm1.btnUploadClick(Sender: TObject);
 var
   i, j: integer;
 begin
-  imgMod.Height := imgSrc.Height;
-  imgMod.Width  := imgSrc.Width;
 
   if (openDialog.Execute) then
   begin
@@ -80,6 +78,8 @@ begin
       end;
     end;
   end;
+    imgMod.Height := imgSrc.Height;
+    imgMod.Width  := imgSrc.Width;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
