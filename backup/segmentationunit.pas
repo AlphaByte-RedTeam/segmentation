@@ -120,7 +120,7 @@ end;
 
 procedure TForm1.btnBinaryClick(Sender: TObject);
 var
-  x, y: integer;
+  x, y, i, j: integer;
   gray: byte;
 begin
   for y:=0 to imgSrc.Height-1 do
@@ -141,6 +141,31 @@ begin
       end;
     end;
   end;
+
+  for j:=0 to imgSrc.Height-1 do
+  begin
+    for i:=0 to imgSrc.Width-1 do
+    begin
+      bmpBinary[i,j] := hasilBiner[i,j];
+      if j=0 then
+      begin
+        bmpBinary[i,-1] := bmpBinary[i,j];
+      end;
+      if j=imgSrc.Height-1 then
+      begin
+        bmpBinary[i,j+1] := bmpBinary[i,j];
+      end;
+      if i=0 then
+      begin
+        bmpBinary[-1,j] := bmpBinary[i,j];
+      end;
+      if i=imgSrc.Width-1 then
+      begin
+        bmpBinary[i+1,j] := bmpBinary[i,j];
+      end;
+    end;
+  end;
+
 end;
 
 procedure TForm1.btnDeteksiTepiClick(Sender: TObject);
@@ -261,6 +286,7 @@ begin
       end;
     end;
   end;
+end;
 
 procedure TForm1.btnErosiClick(Sender: TObject);
 var
