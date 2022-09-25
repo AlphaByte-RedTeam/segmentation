@@ -18,7 +18,6 @@ type
     btnBinary: TButton;
     btnSegmentation: TButton;
     btnGray: TButton;
-    btnDeteksiTepi: TButton;
     btnErosi: TButton;
     btnDilasi: TButton;
     Edit_Trackbar: TEdit;

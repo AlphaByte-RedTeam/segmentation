@@ -101,15 +101,6 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object btnDeteksiTepi: TButton
-    Left = 248
-    Height = 33
-    Top = 56
-    Width = 163
-    Caption = 'Deteksi Tepi'
-    OnClick = btnDeteksiTepiClick
-    TabOrder = 5
-  end
   object tbBiner: TTrackBar
     Left = 232
     Height = 33
@@ -118,25 +109,25 @@ object Form1: TForm1
     Max = 255
     OnChange = tbBinerChange
     Position = 1
-    TabOrder = 6
+    TabOrder = 5
   end
   object btnErosi: TButton
-    Left = 440
+    Left = 248
     Height = 25
-    Top = 56
+    Top = 51
     Width = 75
     Caption = 'Erosi'
     OnClick = btnErosiClick
-    TabOrder = 7
+    TabOrder = 6
   end
   object btnDilasi: TButton
-    Left = 544
+    Left = 344
     Height = 25
-    Top = 56
+    Top = 51
     Width = 75
     Caption = 'Dilasi'
     OnClick = btnDilasiClick
-    TabOrder = 8
+    TabOrder = 7
   end
   object Edit_Trackbar: TEdit
     Left = 504
@@ -144,7 +135,7 @@ object Form1: TForm1
     Top = 13
     Width = 80
     OnChange = Edit_TrackbarChange
-    TabOrder = 9
+    TabOrder = 8
     Text = 'Edit_Trackbar'
   end
   object openDialog: TOpenDialog

@@ -86,7 +86,7 @@ end;
 
 procedure TForm1.Edit_TrackbarChange(Sender: TObject);
 begin
-
+  tbBiner.Position := StrToInt(Edit_Trackbar.Text);
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
