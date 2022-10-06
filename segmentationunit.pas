@@ -37,6 +37,7 @@ type
     procedure btnSaveClick(Sender: TObject);
     procedure btnSegmentationClick(Sender: TObject);
     procedure btnUploadClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure Edit_TrackbarChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure imgSrcClick(Sender: TObject);
@@ -59,7 +60,7 @@ implementation
 uses Windows;
 
 var
-  bmpR, bmpG, bmpB, bmpRR, bmpGG, bmpBB, bmpBinary, BitmapGray, hasilGray, hasilBiner: array[-1..1000, -1..1000] of integer;
+  bmpR, bmpG, bmpB, bmpRR, bmpGG, bmpBB, bmpBinary, BitmapGray, hasilGray, hasilBiner, bmpLabel: array[-1..1000, -1..1000] of integer;
   SE : array [-1..1,-1..1] of Integer;
 
 procedure TForm1.btnUploadClick(Sender: TObject);
@@ -82,6 +83,13 @@ begin
   end;
     imgMod.Height := imgSrc.Height;
     imgMod.Width  := imgSrc.Width;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  x, y : integer;
+begin
+
 end;
 
 procedure TForm1.Edit_TrackbarChange(Sender: TObject);

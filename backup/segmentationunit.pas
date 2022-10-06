@@ -20,6 +20,7 @@ type
     btnGray: TButton;
     btnErosi: TButton;
     btnDilasi: TButton;
+    Button1: TButton;
     Edit_Trackbar: TEdit;
     imgMod: TImage;
     imgSrc: TImage;
